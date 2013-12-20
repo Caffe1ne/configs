@@ -1,4 +1,4 @@
 configs
 ================
 
-A simple collection of configs to use across several machines.
+A simple collection of configs to use across several linux-machines.
