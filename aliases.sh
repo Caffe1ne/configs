@@ -6,4 +6,11 @@ alias icanfind="yum search"
 alias update-all="yum check-update && sudo yum upgrade"
 
 # Various good-to-have stuff #
-alias ddg="lynx --accept_all_cookies duckduckgo.com/?q='$0'"
+
+# Setting up duckduckgo-search... #
+duckduckgo-search() {
+    QUERY=$*
+    SEARCH=${QUERY// /+}
+    lynx --accept_all_cookies duckduckgo.com/?q=$SEARCH
+}
+alias ddg=duckduckgo-search
